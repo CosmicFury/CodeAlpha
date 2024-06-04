@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img1.jpg" class="gallery-image" alt="Image 1">
+                <div class="caption">A Japanese Women</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img2.jpg" class="gallery-image" alt="Image 2">
+                <div class="caption">Sanji and Zoro</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img3.jpg" class="gallery-image" alt="Image 3">
+                <div class="caption">A House in the Forest</div>
+            </div>
+            <div class="gallery-item">
+                <img src="img4.jpg" class="gallery-image" alt="Image 4">
+                <div class="caption">Cliffs</div>
+            </div>
+        </div>
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+    <div class="thumbnails">
+        <img src="img1.jpg" class="thumbnail" onclick="showImage(0)" alt="Thumbnail 1">
+        <img src="img2.jpg" class="thumbnail" onclick="showImage(1)" alt="Thumbnail 2">
+        <img src="img3.jpg" class="thumbnail" onclick="showImage(2)" alt="Thumbnail 3">
+        <img src="img4.jpg" class="thumbnail" onclick="showImage(3)" alt="Thumbnail 4">
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
