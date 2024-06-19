@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5ebaffe11c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav>
+          <button class="nav-btn" id="back-btn" aria-label="Go back">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button class="nav-btn" id="menu-btn" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+        <img
+          id="song-image"
+          src="img2.png"
+          alt="Album art for the current song"
+          class="song-image"
+        />
+        <h1 id="song-title">Wild Song</h1>
+        <p id="song-artist">Troye Sivan</p>
+        <audio id="audio-player" preload="metadata">
+          <source src="01 WILD.mp3" type="audio/mpeg" />
+          <source src="10 YOUTH.mp3" type="audio/mpeg" />
+          <source src="Aap Ki Nazron Ne Samjha.mp3" type="audio/mpeg" />
+          <source src="Let You Love Me.mp3" type="audio/mpeg" />
+        </audio>
+        <div class="progress-container">
+          <span id="current-time">0:00</span>
+          <input
+            type="range"
+            value="0"
+            id="progress"
+            aria-label="Song progress"
+            class="dynamic-color"
+          />
+          <span id="duration">0:00</span>
+        </div>
+        <div class="controls">
+          <button id="prev-btn" aria-label="Previous song">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button id="play-btn" aria-label="Play or pause song">
+            <i class="fa-solid fa-play" id="play-icon"></i>
+          </button>
+          <button id="next-btn" aria-label="Next song">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+      </div>
+      <div class="playlist" id="playlist">
+        <h2>My Playlist</h2>
+        <ul id="song-list">
+          <li
+            data-src="01 WILD.mp3"
+            data-title="Wild Song"
+            data-artist="Troye Sivan"
+            data-image="img2.png"
+          >
+            Wild - Troye Sivan
+          </li>
+          <li
+            data-src="10 YOUTH.mp3"
+            data-title="YOUTH"
+            data-artist="Troye Sivan"
+            data-image="img1.jpg"
+          >
+            YOUTH - Troye Sivan
+          </li>
+          <li
+            data-src="Aap Ki Nazron Ne Samjha.mp3"
+            data-title="Aap Ki Nazron Ne Samjha"
+            data-artist="Jonita Ghandi"
+            data-image="img3.jpeg"
+          >
+            Aap Ki Nazron Ne Samjha - Jonita Ghandi
+          </li>
+          <li
+            data-src="Let You Love Me.mp3"
+            data-title="Let You Love Me"
+            data-artist="Rita Ora"
+            data-image="img4.jpg"
+          >
+            Let You Love Me - Rita Ora
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
